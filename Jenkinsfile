@@ -6,7 +6,7 @@ stage ('Starting downstream job ') {
     build job: 'MasterDev'  
     echo "Pipeline currentResult: ${currentBuild.currentResult}"  
       
-    build job: ' MasterUpstream' ,
+    build job: ' MasterUpstream' 
     echo "Pipeline currentResult: ${currentBuild.currentResult}"  
   }
 }
