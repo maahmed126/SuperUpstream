@@ -3,10 +3,10 @@ pipeline {
   stages {  
 stage ('Starting downstream job ') {
   steps {
-    build job: 'MasterDev'  
+    build job: 'MasterDev'  , propagate: false
     echo "Pipeline currentResult: ${currentBuild.currentResult}"  
       
-    build job: ' MasterUpstream' 
+    build job: ' MasterUpstream' , propagate: false
     echo "Pipeline currentResult: ${currentBuild.currentResult}"  
   }
 }
