@@ -1,10 +1,5 @@
-pipeline {			
-    agent any
-    stages {			
-        stage('Build') {			
-            steps {			
-                echo 'Trigger ALL PrOJECT OF DEVELOP AND MASTER'		
-                     }			
-        }			
-   }		
+stage ('Starting downstream job ') {
+  steps {
+    build job: 'MasterUpstream'
+  }
 }
